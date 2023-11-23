@@ -1,0 +1,23 @@
+{
+  "nodes": [
+    {
+      "id": "O Moelas",
+      "group": "Cited Works",
+      "radius": 20,
+      "citing_patents_count": 10
+    },
+    {
+      "id": "Sé Nova",
+      "group": "Cited Works",
+      "radius": 40,
+      "citing_patents_count": 5
+    }
+  ],
+  "links": [
+    {
+      "source": "O Moelas",
+      "target": "Sé Nova",
+      "value": 2
+    }
+  ]
+}
