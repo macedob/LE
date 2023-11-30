@@ -2,15 +2,113 @@
   "nodes": [
     {
       "id": "O Moelas",
-      "group": "Cited Works",
-      "radius": 20,
-      "citing_patents_count": 10
+      "group": "NG",
+      "radius": 20
     },
     {
       "id": "Sé Nova",
-      "group": "Cited Works",
-      "radius": 40,
-      "citing_patents_count": 5
+      "group": "G",
+      "radius": 20
+    },
+    {
+      "id": "Jardins da Quinta das Lágrimas",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Portugal dos Pequenitos",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Praça da República",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Sé Velha",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Jardim Botânico",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Biblioteca Joanina",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Edifício Central (Polo I)",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Mercado Municipal D.Pedro V",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Escadas Monumentais",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Igreja de Santa Cruz",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Dom Dinis",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Miradouro do Penedo da Saudade",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Mosteiro de Sta. Clara-a-Nova",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Parque Verde do Mondego",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Parque Manuel Braga",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Aqueduto de S.Sebastião",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Jardim da Sereia",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Centro Comercial Avenida",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Coimbra A",
+      "group": "NG",
+      "radius": 20
+    },
+    {
+      "id": "Largo da Portagem",
+      "group": "G",
+      "radius": 20
     }
   ],
   "links": [
