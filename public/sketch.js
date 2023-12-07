@@ -5,7 +5,8 @@ let numAreas = 5;
 let landmarks = [];
 
 function setup() {
-  createCanvas(canvasWidth, canvasHeight);
+  //createCanvas(canvasWidth, canvasHeight);
+  createCanvas(1, 1);
 
   background(0);
 

@@ -26,15 +26,14 @@ d3.json("areas.json").then(function (data) {
   let simulation = d3
     .forceSimulation(nodes)
     .nodes(nodes)
-    /*
+
     .force(
       "link",
       d3.forceLink(links).id((d) => d.id)
     )
-    */
     .force(
       "charge",
-      d3.forceCollide((d) => d.radius + 10)
+      d3.forceCollide((d) => d.radius)
     )
     .force("x", d3.forceX())
     .force("y", d3.forceY());
@@ -72,19 +71,25 @@ d3.json("areas.json").then(function (data) {
       .attr("x1", (d) => d.source.x)
       .attr("y1", (d) => d.source.y)
       .attr("x2", (d) => d.target.x)
-      .attr("y2", (d) => d.target.y);
+      .attr("y2", (d) => d.target.y)
+      .attr("stroke-width", (d) => d.value);
 
     node
       .attr("cx", (d) => d.x)
       .attr("cy", (d) => d.y)
       .attr("r", (d) => d.radius);
+
     simulation
       .force(
         "charge",
-        d3.forceCollide((d) => d.radius + 5)
+        d3.forceCollide((d) => d.radius + 10)
       )
       .force("x", d3.forceX())
-      .force("y", d3.forceY());
+      .force("y", d3.forceY())
+      .force(
+        "link",
+        d3.forceLink(links).distance((d) => d.value)
+      );
   });
 
   // Reheat the simulation when drag starts, and fix the subject position.
@@ -97,6 +102,21 @@ d3.json("areas.json").then(function (data) {
         data.nodes[i].radius += 1;
         event.subject.radius += 1;
       }
+    }
+
+    for (let i = 0; i < data.links.length; i++) {
+      let raioSource, raioTarget;
+
+      for (let j = 0; j < data.nodes.length; j++) {
+        if (data.nodes[j].id == data.links[i].source) {
+          raioSource = data.nodes[j].radius;
+        }
+        if (data.nodes[j].id == data.links[i].target) {
+          raioTarget = data.nodes[j].radius;
+        }
+      }
+
+      data.links[i].value = (raioSource + raioTarget) / 2;
     }
   }
 

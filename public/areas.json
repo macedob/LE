@@ -113,8 +113,13 @@
   ],
   "links": [
     {
-      "source": "O Moelas",
-      "target": "Sé Nova",
+      "source": "Miradouro do Penedo da Saudade",
+      "target": "Jardim da Sereia",
+      "value": 5
+    },
+    {
+      "source": "Miradouro do Penedo da Saudade",
+      "target": "Jardim Botânico",
       "value": 2
     }
   ]
