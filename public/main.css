@@ -1,3 +1,135 @@
+/*Geral*/
 body {
-  margin: auto;
+  margin: 0;
+}
+/*Footer*/
+button {
+  position: relative;
+  right: 5vw;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  padding: 2vw;
+}
+
+button:active {
+  color: white;
+}
+
+footer {
+  position: fixed;
+  bottom: 0%;
+  width: 100vw;
+  text-align: right;
+  background: yellow;
+  margin: 0;
+}
+
+/*HOME*/
+#main_title {
+  display: inline-block;
+  position: absolute;
+  font-size: 16em;
+}
+/*Stickers - Drag*/
+#drag-1 {
+  width: 10vw;
+  min-height: 2em;
+  margin: 1rem 0 0 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 0.4em;
+  touch-action: none;
+  user-select: none;
+  transform: translate(0px, 0px);
+  text-align: center;
+}
+
+#drag-2 {
+  width: 10vw;
+  min-height: 2em;
+  margin: 1rem 0 0 1rem;
+  background-color: yellow;
+  color: white;
+  border-radius: 0.4em;
+  touch-action: none;
+  user-select: none;
+  transform: translate(0px, 0px);
+  text-align: center;
+  color: black;
+}
+
+/*Páginas*/
+p {
+  width: 10vw;
+}
+
+#home,
+#editorial,
+#article1,
+#article2,
+#join_our_movement {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+#home {
+  display: block;
+  background-color: white;
+}
+
+#editorial {
+  display: none;
+  background-color: darkgoldenrod;
+}
+
+#article1 {
+  display: none;
+  background-color: aqua;
+
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+#article2 {
+  display: none;
+  background-color: forestgreen;
+
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+#join_our_movement {
+  display: none;
+  background-color: firebrick;
+}
+
+/*Mapa*/
+#svg_map {
+  display: none;
+  position: relative;
+  z-index: 1000;
+}
+
+/*Scrollbar*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: Yellow;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: black;
 }

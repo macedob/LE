@@ -12,7 +12,8 @@ d3.json("areas.json").then(function (data) {
     .attr("width", width)
     .attr("height", height)
     .attr("viewBox", [-width / 2, -height / 2, width, height])
-    .attr("style", "max-width: 100%; height: auto;");
+    .attr("style", "max-width: 100%; height: auto;")
+    .attr("id", "svg_map");
 
   // Specify the color scale.
   const color = d3.scaleOrdinal(d3.schemeCategory10);

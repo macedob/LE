@@ -4,12 +4,139 @@
     <meta charset="UTF-8" />
     <script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.8.0/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     <link rel="stylesheet" href="main.css" />
     <title>Alta&Baixa</title>
   </head>
-  <h1>Aquele teste de HTML básico</h1>
   <body>
+    <main>
+      <div id="home">
+        <h1 id="main_title">ALTA BAIXA</h1>
+        <div id="drag-1" class="draggable">
+          <h4>Sticker</h4>
+        </div>
+        <div id="drag-2" class="draggable">
+          <h4>Sticker</h4>
+        </div>
+      </div>
+
+      <div id="editorial">
+        <h2 class="title">Editorial.</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+          consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+          nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+          venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+          Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
+          vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
+          vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra
+          quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+          laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
+          augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
+          rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam
+          semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc,
+          blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio
+          et ante tincidunt tempus. Donec vitae sapien ut libero venenatis
+          faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus
+          tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+          sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit
+          cursus nunc,
+        </p>
+      </div>
+      <div id="article1">
+        <h2 class="title">1st Article.</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+          consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+          nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+          venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+          Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
+          vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
+          vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra
+          quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+          laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
+          augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
+          rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam
+          semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc,
+          blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio
+          et ante tincidunt tempus. Donec vitae sapien ut libero venenatis
+          faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus
+          tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+          sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit
+          cursus nunc,
+        </p>
+      </div>
+      <div id="article2">
+        <h2 class="title">2nd Article.</h2>
+      </div>
+      <div id="join_our_movement">
+        <h2 class="title">Join Our Movement.</h2>
+        <h4>Click on the places that mean the most to you.</h4>
+      </div>
+    </main>
+    <footer>
+      <button
+        onclick="show('home','join_our_movement','editorial','article1','article2','none')"
+      >
+        Home
+      </button>
+
+      <button
+        onclick="show('editorial','join_our_movement','home','article1','article2','none')"
+      >
+        Editorial
+      </button>
+
+      <button
+        onclick="show('article1','home','join_our_movement','editorial','article2','none')"
+      >
+        1st Article
+      </button>
+
+      <button
+        onclick="show('article2', 'home','join_our_movement','editorial','article1','none')"
+      >
+        2nd Article
+      </button>
+
+      <button
+        onclick="show('join_our_movement','home','editorial','article1','article2','block')"
+      >
+        Join Our Movement
+      </button>
+    </footer>
+    <script type="text/javascript" src="interact.js"></script>
     <script type="text/javascript" src="mapa.js"></script>
     <script type="text/javascript" src="sketch.js"></script>
+    <script>
+      function show(id1, id2, id3, id4, id5, display_map) {
+        let main = document.getElementById(id1);
+        let p1 = document.getElementById(id2);
+        let p2 = document.getElementById(id3);
+        let p3 = document.getElementById(id4);
+        let p4 = document.getElementById(id5);
+        let map = document.getElementById("svg_map");
+
+        main.style.display = "block";
+        p1.style.display = "none";
+        p2.style.display = "none";
+        p3.style.display = "none";
+        p4.style.display = "none";
+
+        map.style.display = display_map;
+      }
+
+      function show_element(id, display) {
+        let element = document.getElementById(id);
+        let display_element = display;
+        element.style.display = display;
+      }
+    </script>
   </body>
 </html>
