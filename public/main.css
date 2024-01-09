@@ -37,8 +37,6 @@ footer {
   width: 10vw;
   min-height: 2em;
   margin: 1rem 0 0 1rem;
-  background-color: black;
-  color: white;
   border-radius: 0.4em;
   touch-action: none;
   user-select: none;
@@ -50,8 +48,6 @@ footer {
   width: 10vw;
   min-height: 2em;
   margin: 1rem 0 0 1rem;
-  background-color: yellow;
-  color: white;
   border-radius: 0.4em;
   touch-action: none;
   user-select: none;
@@ -82,12 +78,12 @@ p {
 
 #editorial {
   display: none;
-  background-color: darkgoldenrod;
+  background-color: white;
 }
 
 #article1 {
   display: none;
-  background-color: aqua;
+  background-color: white;
 
   overflow: scroll;
   overflow-x: hidden;
@@ -95,7 +91,7 @@ p {
 
 #article2 {
   display: none;
-  background-color: forestgreen;
+  background-color: white;
 
   overflow: scroll;
   overflow-x: hidden;
@@ -103,7 +99,7 @@ p {
 
 #join_our_movement {
   display: none;
-  background-color: firebrick;
+  background-color: white;
 }
 
 /*Mapa*/
