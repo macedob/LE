@@ -33,27 +33,48 @@ footer {
   font-size: 16em;
 }
 /*Stickers - Drag*/
-#drag-1 {
+#drag-1,
+#drag-2,
+#drag-3,
+#drag-4,
+#drag-5 {
   width: 10vw;
   min-height: 2em;
   margin: 1rem 0 0 1rem;
   border-radius: 0.4em;
   touch-action: none;
   user-select: none;
-  transform: translate(0px, 0px);
   text-align: center;
+  display: inline-block;
+}
+
+#drag-1 {
+  position: relative;
+  top: 5vh;
 }
 
 #drag-2 {
-  width: 10vw;
-  min-height: 2em;
-  margin: 1rem 0 0 1rem;
-  border-radius: 0.4em;
-  touch-action: none;
-  user-select: none;
-  transform: translate(0px, 0px);
-  text-align: center;
-  color: black;
+  position: relative;
+  top: 27vh;
+  left: 30vw;
+}
+
+#drag-3 {
+  position: relative;
+  top: 46vh;
+  left: -15vw;
+}
+
+#drag-4 {
+  position: relative;
+  top: 0vh;
+  left: 28vw;
+}
+
+#drag-5 {
+  position: relative;
+  top: 60vh;
+  left: 23vw;
 }
 
 /*Páginas*/
