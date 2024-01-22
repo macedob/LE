@@ -89,7 +89,7 @@ d3.json("areas.json").then(function (data) {
       .force("y", d3.forceY())
       .force(
         "link",
-        d3.forceLink(links).distance((d) => d.value)
+        d3.forceLink(links).distance((d) => 100 - d.value)
       );
   });
 
