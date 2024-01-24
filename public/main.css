@@ -1,7 +1,14 @@
 /*Geral*/
 body {
   margin: 0;
+
+  font-family: 'Helvetica', sans-serif;
+  color: rgb(20,20,20);
 }
+b{
+  font-family: 'Helvetica-Bold', sans-serif;
+}
+
 /*Footer*/
 button {
   position: relative;
@@ -80,6 +87,27 @@ footer {
 /*Páginas*/
 p {
   width: 40vw;
+  margin: 2vw;
+}
+
+h1{
+  font-size: 5rem;
+  margin: 2vw;
+}
+h2{
+  font-size: 6rem;
+  margin: 2vw;
+  font-family: 'Helvetica-Bold', sans-serif;
+}
+h3{
+  font-size: 3rem;
+  margin: 2vw;
+  margin-top: 1vh;
+}
+h4{
+  font-size: 2rem;
+  margin: 2vw;
+  margin-top: 10vh;
 }
 
 #home,
@@ -149,4 +177,24 @@ p {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: black;
+}
+
+.author {
+  width: 40%;
+  font-size: 1rem;
+  float: left;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('fonts/Helvetica.ttf') format('truetype'); /* Substitua pelo caminho real do seu arquivo de fonte regular */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica-Bold';
+  src: url('fonts/Helvetica-Bold.ttf') format('truetype'); /* Substitua pelo caminho real do seu arquivo de fonte regular */
+  font-weight: bold;
+  font-style: normal;
 }
