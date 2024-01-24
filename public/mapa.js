@@ -51,15 +51,28 @@ d3.json("areas.json").then(function (data) {
 
   let node = svg
     .append("g")
-    .attr("stroke", "#fff")
-    .attr("stroke-width", 1.5)
-    .selectAll("circle")
+    .attr("stroke", "#000")
+    .attr("stroke-width", 4)
+    .selectAll("g")
     .data(nodes)
-    .join("circle")
-    .attr("r", 5)
+    .join("g");
+
+  let circ = node
+    .append("circle")
+    .attr("r", (d) => d.radius)
     //.attr("fill", (d) => color(d.group))
     .attr("fill", "white")
-    .style("background-image", 'url("assets/sticker1.png")');
+    .attr("cx", (d) => d.x)
+    .attr("cy", (d) => d.y)
+    .attr("r", (d) => d.radius);
+
+  let imagem = node
+    .append("image")
+    .attr("x", (d) => d.x - d.radius)
+    .attr("y", (d) => d.y - d.radius)
+    .attr("width", (d) => d.radius * 2)
+    .attr("height", (d) => d.radius * 2)
+    .attr("xlink:href", (d) => "assets/" + d.id + ".svg");
 
   node.append("title").text((d) => d.id);
 
@@ -81,6 +94,25 @@ d3.json("areas.json").then(function (data) {
       .attr("cx", (d) => d.x)
       .attr("cy", (d) => d.y)
       .attr("r", (d) => d.radius);
+
+    circ
+      .attr("cx", (d) => d.x)
+      .attr("cy", (d) => d.y)
+      .attr("r", (d) => d.radius);
+
+    imagem
+      .attr("x", (d) => d.x - d.radius)
+      .attr("y", (d) => d.y - d.radius)
+      .attr("width", (d) => d.radius * 2)
+      .attr("height", (d) => d.radius * 2);
+
+    /*
+    node
+      .append("img")
+      .attr("src", "assets/sticker1.png")
+      .attr("width", (d) => d.radius * 2)
+      .attr("height", (d) => d.radius * 2);
+      */
 
     simulation
       .force(
