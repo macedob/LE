@@ -57,7 +57,9 @@ d3.json("areas.json").then(function (data) {
     .data(nodes)
     .join("circle")
     .attr("r", 5)
-    .attr("fill", (d) => color(d.group));
+    //.attr("fill", (d) => color(d.group))
+    .attr("fill", "white")
+    .style("background-image", 'url("assets/sticker1.png")');
 
   node.append("title").text((d) => d.id);
 
