@@ -1,7 +1,7 @@
 d3.json("areas.json").then(function (data) {
   // Specify the dimensions of the chart.
-  const width = 928;
-  const height = 680;
+  const width = 1920;
+  const height = window.innerHeight + 50;
 
   let raio = 20;
 
@@ -43,7 +43,7 @@ d3.json("areas.json").then(function (data) {
   let link = svg
     .append("g")
     .attr("stroke", "#999")
-    .attr("stroke-opacity", 0.6)
+    .attr("stroke-opacity", 0.8)
     .selectAll("line")
     .data(links)
     .join("line")
@@ -51,7 +51,7 @@ d3.json("areas.json").then(function (data) {
 
   let node = svg
     .append("g")
-    .attr("stroke", "#000")
+    .attr("stroke", "#fff")
     .attr("stroke-width", 4)
     .selectAll("g")
     .data(nodes)
@@ -59,7 +59,7 @@ d3.json("areas.json").then(function (data) {
 
   let circ = node
     .append("circle")
-    .attr("r", (d) => d.radius)
+    .attr("r", (d) => d.radius - 10)
     //.attr("fill", (d) => color(d.group))
     .attr("fill", "white")
     .attr("cx", (d) => d.x)
@@ -106,14 +106,6 @@ d3.json("areas.json").then(function (data) {
       .attr("width", (d) => d.radius * 2)
       .attr("height", (d) => d.radius * 2);
 
-    /*
-    node
-      .append("img")
-      .attr("src", "assets/sticker1.png")
-      .attr("width", (d) => d.radius * 2)
-      .attr("height", (d) => d.radius * 2);
-      */
-
     simulation
       .force(
         "charge",
@@ -123,7 +115,7 @@ d3.json("areas.json").then(function (data) {
       .force("y", d3.forceY())
       .force(
         "link",
-        d3.forceLink(links).distance((d) => 100 - d.value)
+        d3.forceLink(links).distance((d) => 200)
       );
   });
 
