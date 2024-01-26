@@ -240,6 +240,10 @@ h5{
   clear: right;
 }
 
+#article2 .aliRight p{
+  margin-left: 30vw;
+}
+
 #article2 .aliRight h4{
   float: right;
 }
@@ -251,6 +255,14 @@ h5{
   width: 50vw;
 }
 
+#article2 .aliRight h5{
+  width: 50vw;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
 #article1 .aliRight h4{
   text-align: right;
 }
@@ -259,4 +271,8 @@ h5{
   width: 50vw;
   display: flex;
   flex-direction: column;
+}
+
+#article1, #article2 {
+  margin-bottom: 20vh;
 }
