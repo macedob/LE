@@ -102,31 +102,34 @@ footer {
 p {
   width: 40vw;
   margin: 2vw;
-  font-size: 1.40rem;
+  font-size: 1.30rem;
 }
 
 h1{
   font-size: 5rem;
   margin: 2vw;
   text-transform: uppercase;
+  line-height: 1;
 }
 h2{
   font-size: 6rem;
   margin: 2vw;
   font-family: 'Helvetica-Bold', sans-serif;
   text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.04em;
 }
 h3{
   font-size: 3rem;
   margin: 2vw;
   margin-top: 1vh;
-  text-transform: uppercase;
 }
 h4{
   font-size: 4rem;
   margin: 2vw;
   margin-top: 10vh;
   text-transform: uppercase;
+  line-height: 1;
 }
 h5{
   margin: 2vw;
@@ -264,14 +267,16 @@ h5{
 }
 
 #article2 .aliRight h4{
-  float: right;
+  /*float: right;*/
+  text-align: right;
+  margin-right: 2vw;
 }
 
 #article1 .aliRight p{
   text-align: right;
 }
 #article2 h4{
-  width: 50vw;
+  width: 96vw;
 }
 
 #article2 .aliRight h5{
