@@ -1,4 +1,9 @@
 /*Geral*/
+:root {
+  font-size: 1.4vw; /* Define o tamanho da fonte padrão para o elemento raiz */
+}
+
+
 body {
   margin: 0;
 
