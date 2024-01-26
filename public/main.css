@@ -18,7 +18,13 @@ button {
   padding: 0;
   cursor: pointer;
   padding: 2vw;
-  font-family: 'Helvetica-Bold', sans-serif;
+  padding-top: 6vh;
+  padding-bottom: 2vh;
+  font-family: 'Helvetica', sans-serif;
+}
+
+button:hover{
+  color:white;
 }
 
 button:active {
@@ -29,8 +35,10 @@ footer {
   position: fixed;
   bottom: 0%;
   width: 100vw;
+  height: auto;
   text-align: right;
-  background: yellow;
+  /*background: yellow;*/
+  background: linear-gradient(to top, yellow, transparent);
   margin: 0;
 }
 
@@ -89,6 +97,7 @@ footer {
 p {
   width: 40vw;
   margin: 2vw;
+  font-size: 1.25rem;
 }
 
 h1{
